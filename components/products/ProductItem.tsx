@@ -5,7 +5,7 @@ import React from "react";
 
 export default function ProductItem({ product }: { product: Product }) {
   return (
-    <div className="card bg-base-300 shadow-xl mb-4">
+    <div className="card bg-[#fefefe] shadow-xl mb-4 ">
       <figure>
         <Link href={`/product/${product.slug}`}>
           <Image
@@ -13,7 +13,7 @@ export default function ProductItem({ product }: { product: Product }) {
             alt={product.name}
             width={300}
             height={300}
-            className="object-cover h-64 w-full"
+            className="object-fill h-64 w-full"
           />
         </Link>
       </figure>
