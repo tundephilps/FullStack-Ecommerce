@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import logo from "../public/images/logo.png";
+import logo from "@/public/images/logo.png";
 import { FaPhone, FaSearch, FaUser } from "react-icons/fa";
 import { FaBasketShopping, FaLocationPin } from "react-icons/fa6";
+import Menu from "./Menu";
 
 const Header = () => {
   return (
@@ -87,21 +88,14 @@ const Header = () => {
         </div>
 
         <div className="flex items-center gap-10 max-sm:gap-5">
-          <div className="flex flex-col items-center gap-1 cursor-pointer">
+          {/* <div className="flex flex-col items-center gap-1 cursor-pointer">
             <FaLocationPin width={13} height={13} className="text-black" />
             <span className="font-bold text-[0.6rem] text-black">
               Showrooms
             </span>
-          </div>
+          </div> */}
 
-          <div className="flex flex-col items-center gap-1 cursor-pointer">
-            <FaUser width={18} height={18} className="text-black" />
-            <span className="font-bold text-[0.6rem] text-black">Account</span>
-          </div>
-          <div className="flex flex-col items-center gap-1 cursor-pointer">
-            <FaBasketShopping width={18} height={18} className="text-black" />
-            <span className="font-bold text-[0.6rem] text-black">Basket</span>
-          </div>
+          <Menu />
         </div>
       </div>
     </nav>
