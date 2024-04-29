@@ -29,7 +29,7 @@ export const data = {
       countInStock: 20,
       description: "A popular shirt",
       isFeatured: true,
-      banner: "/images/banner1.jpg",
+      banner: "/images/bed1.webp",
     },
     {
       name: "Mattress",
@@ -43,7 +43,7 @@ export const data = {
       countInStock: 20,
       description: "A popular shirt",
       isFeatured: true,
-      banner: "/images/banner2.jpg",
+      banner: "/images/bed2.jpg",
     },
     {
       name: "Pillow",
