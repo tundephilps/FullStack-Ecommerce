@@ -3,6 +3,7 @@ import { signIn, useSession } from "next-auth/react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
+import Link from "next/link";
 
 type Inputs = {
   email: string;
@@ -41,9 +42,9 @@ const Form = () => {
     });
   };
   return (
-    <div className="max-w-sm  mx-auto card bg-base-300 my-4">
+    <div className="max-w-sm  mx-auto card bg-[#ffffff] my-4">
       <div className="card-body">
-        <h1 className="card-title">Sign in</h1>
+        <h1 className="card-title text-black">Sign in</h1>
         {params.get("error") && (
           <div className="alert text-error">
             {params.get("error") === "CredentialsSignin"
@@ -69,7 +70,7 @@ const Form = () => {
                   message: "Email is invalid",
                 },
               })}
-              className="input input-bordered w-full max-w-sm"
+              className="input input-bordered w-full max-w-sm bg-white"
             />
             {errors.email?.message && (
               <div className="text-error">{errors.email.message}</div>
@@ -85,7 +86,7 @@ const Form = () => {
               {...register("password", {
                 required: "Password is required",
               })}
-              className="input input-bordered w-full max-w-sm"
+              className="input input-bordered bg-white w-full max-w-sm"
             />
             {errors.password?.message && (
               <div className="text-error">{errors.password.message}</div>
@@ -104,6 +105,12 @@ const Form = () => {
             </button>
           </div>
         </form>
+        <div className="text-black">
+          Need an account?{" "}
+          <Link className="link" href={`/register?callbackUrl=${callbackUrl}`}>
+            Register
+          </Link>
+        </div>
       </div>
     </div>
   );
