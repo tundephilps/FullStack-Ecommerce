@@ -41,6 +41,8 @@ export const POST = auth(async (req: any) => {
       ...x,
       product: x._id,
       price: dbProductPrices.find((x) => x._id === x._id).price,
+
+      // price: dbProductPrices.find((item) => item._id.toString() === x._id).price,
       _id: undefined,
     }));
 

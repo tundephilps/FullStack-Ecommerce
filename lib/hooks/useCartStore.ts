@@ -105,6 +105,8 @@ export default function useCartService() {
         items: [],
       });
     },
+
+    init: () => cartStore.setState(initialState),
   };
 }
 
